@@ -7,7 +7,7 @@ function makeNewList(){
     var listName = document.querySelector(".input")
     var newList = listName.value;
     var isEmpty = newList.length == 0;
-    var tittle = document.querySelector(".b_tittle")
+    var tittle = document.querySelector(".b_tittle");
     
     
 
@@ -29,7 +29,7 @@ function makeNewList(){
 
             element.style.backgroundColor ="rgb(181, 181, 181)";
             x.style.display = "block";
-    
+            tittle.textContent =newList;
         })
         const textnode = document.createTextNode(newList);
         div.appendChild(textnode);
