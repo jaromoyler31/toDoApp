@@ -91,16 +91,24 @@ body {
 
 .lists {
   margin-left: 30%;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 .lists .b_tittle {
   font-size: 30px;
 }
-.lists #exit {
+.lists .exit {
   color: rgb(41, 39, 39);
   position: absolute;
   top: 90px;
-  right: 20px;
+  right: 42px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.lists .add {
+  color: rgb(41, 39, 39);
+  position: absolute;
+  top: 90px;
+  right: 84px;
   font-size: 40px;
   cursor: pointer;
 }

@@ -25,25 +25,44 @@ function makeNewList(){
         div.classList.add("color", newList)
         div.addEventListener("click", function(e){
             var element = e.target;
-            element.style.backgroundColor ="rgb(242, 242, 242)";
-
             element.style.backgroundColor ="rgb(181, 181, 181)";
             x.style.display = "block";
             tittle.textContent =newList;
+            
         })
-        const textnode = document.createTextNode(newList);
-        div.appendChild(textnode);
+
+        if (newList.length>15){
+            const textnode = document.createTextNode(newList.slice(0,15)+"...");
+            div.appendChild(textnode);
+
+        }
+        else{
+            const textnode = document.createTextNode(newList);
+            div.appendChild(textnode);
+        }
+
         
         document.querySelector(".list_name").prepend(div);
         document.querySelector(".color").style.backgroundColor ="rgb(181, 181, 181)";
 
         //tittle
-        tittle.textContent =newList;
+        if (newList.length>30){
+            tittle.textContent =newList.slice(0,30)+"...";
+        } else{
+            tittle.textContent =newList;
+        }
+        
         
     }
 }
 
-
+function add(){
+    var checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    var checknode = document.createTextNode("Bob"); 
+    checkBox.appendChild(checknode);
+    document.querySelector(".check_box").prepend(checkBox);
+}
 
 function exitOut(){
     document.querySelector(".color").style.backgroundColor ="rgb(242, 242, 242)";
