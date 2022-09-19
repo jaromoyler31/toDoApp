@@ -1,0 +1,107 @@
+body {
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: rgb(41, 39, 39);
+  z-index: 1;
+}
+.header .header_text {
+  font-size: 30px;
+  color: rgb(38, 255, 0);
+  font-weight: 800;
+}
+.header .header_icons {
+  font-size: 30px;
+  color: white;
+  display: flex;
+  gap: 20px;
+  transition: 1s;
+}
+.header .fa-solid {
+  transition: 1s;
+}
+.header .fa-solid:hover {
+  color: rgb(38, 255, 0);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(242, 242, 242);
+  width: 25%;
+  padding: 20px;
+  padding-right: 40px;
+  position: fixed;
+  height: 100%;
+  z-index: 2;
+}
+.sideBar .input {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.sideBar button {
+  background-color: rgb(38, 255, 0);
+  width: 50%;
+  margin-top: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  font-size: 15px;
+  transition-duration: 0.4s;
+  text-decoration: hidden;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 10px;
+}
+.sideBar button:hover {
+  background-color: rgb(73, 189, 53);
+  transition: 1s;
+}
+.sideBar .line {
+  margin: 20px;
+  width: 100%;
+}
+.sideBar .list_name {
+  font-size: 25px;
+  width: 100%;
+  margin: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+}
+.sideBar .list_name .color {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.lists {
+  padding-left: 30%;
+  padding-top: 20px;
+}
+.lists .b_tittle {
+  font-size: 30px;
+}
+.lists #exit {
+  color: rgb(41, 39, 39);
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
