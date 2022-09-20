@@ -112,5 +112,15 @@ body {
   font-size: 40px;
   cursor: pointer;
 }
+.lists .task {
+  color: rgb(41, 39, 39);
+  position: absolute;
+  top: 96px;
+  right: 132px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
 
 /*# sourceMappingURL=style.css.map */
