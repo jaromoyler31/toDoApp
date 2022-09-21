@@ -41,7 +41,7 @@ body{
 
 
 .sideBar{
-    overflow: auto;
+    overflow:scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,15 +103,17 @@ body{
 
 
 .lists{
+    overflow: auto;
+
     margin-left:30%; 
     padding-top:25px;
     .b_tittle{
-        font-size: 30px;
+        font-size: 40px;
     }
     .exit{
         color:$black;
         position:absolute;
-        top:90px;
+        top:100px;
         right:42px;
         font-size:40px;
         cursor: pointer;
@@ -119,21 +121,31 @@ body{
     .add{
         color:$black;
         position:absolute;
-        top:90px;
+        top:100px;
         right:84px;
         font-size:40px;
         cursor: pointer;
     }
     .task{
         color:$black;
-        
+
         position:absolute;  
-        top:96px;
+        top:104px;
         right:132px;
         padding-top: 4px;
         padding-bottom:4px;
         padding-left:12px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        
+    } 
+    .checkpoint{
+        font-size:30px;
+        padding-left:40px;
+        input{
+            width:15px;
+            height:15px;
+        }
+        input:checked{
+            text-decoration:line-through;
+        }
     }
 }

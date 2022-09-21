@@ -52,32 +52,41 @@ function makeNewList(){ //Main Function for Creating NewList
             tittle.textContent =newList;
         }
         
-        
+        const div_checkbox =document.createElement("div")
+        div_checkbox.classList.add(newList)
+        document.querySelector(".check_box").append(div_checkbox)
+
     }
 }
  
 function add(){ //Adds new element (Checkbox)
     var input_task = document.querySelector(".task").value;
     var isEmpty = input_task.length == 0; //chekcing if empty
+    var task =document.querySelector(".task").value;
+    
+    var listName = document.querySelector(".input")//git input text and names it ListName
+    var newList = listName.value; //New list is holding value of list Name
+    
 
     if (isEmpty){
         alert("Name a Task First")
     }else{
 
-        input_task.value = "";
-        const div = document.createElement("div");    
-        div.classList.add("checkpoint")
-        document.querySelector(".check_box").prepend(div);
-        var checkBox = document.createElement("input");
-        checkBox.type = "checkbox";
-        document.querySelector(".checkpoint").prepend(checkBox);
+        document.querySelector(".task").value = ""; //sets input box with no text
+        const div = document.createElement("div");    //div with each check box and text inside
+        div.classList.add("checkpoint", "row" ) //gave the div the name of Checkpoint
+        document.querySelector(".check_box").prepend(div); //putting checkpoint in check_box
+        var checkBox = document.createElement("input"); //creating varable name checkBox that is a input
+        checkBox.type = "checkbox"; //making the input a check box input
+        checkBox.classList.add("col-sm") //giving it a class name of col-sm
+        document.getElementsByClassName(listName).prepend(checkBox);
+        var endup =document.querySelector(".checkpoint")
+        endup.textContent = task;
+        document.querySelector(".checkpoint").prepend(checkBox)
+
     }
 
-    
-    
-    
 
-    
 }
 
 function exitOut(){ //Hides things
@@ -87,3 +96,4 @@ function exitOut(){ //Hides things
 
     
 }
+
