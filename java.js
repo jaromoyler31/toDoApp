@@ -183,23 +183,19 @@ function add(){ //Adds new element (Checkbox)
         var checkBox = document.createElement("input");
         checkBox.type = "checkbox";
         checkBox.classList.add("col-sm")
-        document.querySelector(".text:last-child").append(checkBox);
+        
         var endup =document.querySelector(".text:last-child")
         endup.textContent = input_task ;
         document.querySelector(".text").contentEditable = true;
+        document.querySelector(".text:last-child").prepend(checkBox);
         del_icon1 = document.createElement("a");   
         del_icon1.innerHTML = "<i class='fa-solid fa-trash col-sm delete'></i>"
         document.querySelector(".checkpoint:last-child").append(del_icon1);
     
         del_icon1.addEventListener("click", function(e){
-            var element = e.target;
-            var deletinga = document.querySelector(".row");
+            var element = e.target
             element.remove();
             check_text.remove();
-      
-            
-    
-    
         })
     
     }   
