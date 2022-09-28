@@ -84,18 +84,29 @@ body {
   padding-right: 40px;
   text-align: center;
 }
+.sideBar .list_name .list_text {
+  cursor: pointer;
+}
 .sideBar .list_name .color {
   padding: 20px;
+  position: relative;
+}
+.sideBar .list_name .color .delete1 {
+  position: absolute;
+  left: 10px;
+  top: 21.5px;
   cursor: pointer;
 }
 
 .lists {
   overflow: auto;
-  margin-left: 30%;
+  margin-left: 31%;
   padding-top: 25px;
+  text-align: start;
 }
 .lists .b_tittle {
   font-size: 40px;
+  padding-left: 50px;
 }
 .lists .exit {
   color: rgb(41, 39, 39);
@@ -133,6 +144,19 @@ body {
 }
 .lists .checkpoint input:checked {
   text-decoration: line-through;
+}
+.lists .checkpoint .delete {
+  cursor: pointer;
+}
+
+.checkpoint {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.checkpoint .delete {
+  font-size: 20px;
+  padding-right: 42px;
 }
 
 /*# sourceMappingURL=style.css.map */

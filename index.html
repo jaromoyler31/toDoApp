@@ -17,15 +17,15 @@
         <div class="header_icons">
             <i class="fa-solid fa-user"></i>
             <i class="fa-solid fa-gear"></i>
-        </div>
+        </div>  
     </div>
 
     <div class="sideBar" >
-        <input type="text" placeholder="Enter Your List Name...." class="input">
+        <input type="text" placeholder="Enter Your List Name...." id="input_list" class="input">
         <button onclick ="makeNewList()"><span>Create List </span>&#8681</button>
         <hr class="line">
 
-        <div class="list_name">
+        <div class="list_name" id="list_name">
             
         </div>
         
@@ -36,6 +36,11 @@
     <div class="lists hide">
         <div class="list_tittle ">
             <a class="b_tittle "></a>
+            <div>
+                <i class="fa-solid fa-x exit" onclick="exitOut()" ></i> 
+                <input type="text" placeholder="Create a Task >" class="task" id="task">
+                <i class="fa-solid fa-plus add" onclick="add()"></i>
+            </div>
             <hr>
 
 
@@ -45,9 +50,7 @@
 
 
         </div>
-        <i class="fa-solid fa-x exit" onclick="exitOut()" ></i> 
-        <input type="text" placeholder="Create a Task >" class="task">
-        <i class="fa-solid fa-plus add" onclick="add()"></i>
-    </div>
+        
+        
 </body>
 </html>

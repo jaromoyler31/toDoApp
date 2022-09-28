@@ -93,10 +93,20 @@ body{
         padding-left: 40px;
         padding-right:40px;
         text-align: center;
-        .color{
-            padding:20px;
+        .list_text{
             cursor: pointer;
         }
+        .color{
+            padding:20px;
+            position: relative;
+            .delete1{ 
+                position: absolute;
+                left:10px;
+                top:21.5px;
+                cursor: pointer;
+            }
+        }
+       
         
     }
 }
@@ -105,10 +115,12 @@ body{
 .lists{
     overflow: auto;
 
-    margin-left:30%; 
+    margin-left:31%; 
     padding-top:25px;
+    text-align:start;
     .b_tittle{
         font-size: 40px;
+        padding-left:50px;
     }
     .exit{
         color:$black;
@@ -140,6 +152,7 @@ body{
     .checkpoint{
         font-size:30px;
         padding-left:40px;
+        
         input{
             width:15px;
             height:15px;
@@ -147,5 +160,20 @@ body{
         input:checked{
             text-decoration:line-through;
         }
+        .delete{
+            cursor: pointer;
+        }
     }
+}
+
+
+.checkpoint{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .delete{
+        font-size: 20px;
+        padding-right:42px;
+    }
+    
 }
