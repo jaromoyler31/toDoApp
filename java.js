@@ -79,14 +79,12 @@ function makeNewList(){ //Main Function for Creating NewList
 
         inside_div.addEventListener("blur", function(){ //gives them the function if they are clicked to change background to gray 
             update_tittle()
-            listData[num_Array] = document.querySelector(".list_text").innerHTML;
-            
+            console.log([listData[num_Array]]);
 
         })
         
         
 
-        update_tittle()
 
         
         
@@ -99,11 +97,12 @@ function makeNewList(){ //Main Function for Creating NewList
             document.querySelector(".b_tittle").textContent = element.textContent
             num_Array = (listData.indexOf(this.innerHTML));
             console.log(listData[num_Array])
+
             listData[num_Array] = document.querySelector(".list_text").innerHTML;
-            
-           
+        
             del_icon.addEventListener("click", function(f){
                 var f_del = f.target;
+                console.log(element)
                 element.remove();
                 
                 f_del.remove()
