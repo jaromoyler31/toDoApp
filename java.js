@@ -99,8 +99,7 @@ function makeNewList(){ //Main Function for Creating NewList
         
             del_icon.addEventListener("click", function(f){
                 var f_del = f.target;
-                console.log(element)
-                element.remove();
+                element.parentElement.remove();
                 
                 f_del.remove()
                 listData.splice(num_Array)
@@ -143,7 +142,10 @@ function makeNewList(){ //Main Function for Creating NewList
 
 
 function update_tittle(){
-    document.querySelector(".list_text").contentEditable = true;
+    
+    Array.from(document.querySelectorAll(".list_text")).forEach(element =>{
+        element.contentEditable = true;
+    } )
 
     var new_text = document.querySelector(".list_text").innerHTML;
     document.querySelector(".b_tittle").textContent = new_text;
@@ -193,8 +195,8 @@ function add(){ //Adds new element (Checkbox)
     
         del_icon1.addEventListener("click", function(e){
             var element = e.target
-            element.remove();
-            check_text.remove();
+            element.parentElement.remove();
+            check_text.parentElement.remove();
         })
     
     }   
