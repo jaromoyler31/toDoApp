@@ -6,9 +6,6 @@ var num_Array;
 var listData =[];
 
 
-
-
-
 function makeNewList(){ //Main Function for Creating NewList
 
     var listName = document.querySelector(".input")//git input text and names it ListName
@@ -190,6 +187,9 @@ function add(){ //Adds new element (Checkbox)
         del_icon1 = document.createElement("a");   
         del_icon1.innerHTML = "<i class='fa-solid fa-trash col-sm delete'></i>"
         document.querySelector(".checkpoint:last-child").append(del_icon1);
+        Array.from(document.querySelectorAll(".text")).forEach(element => {
+            element.contentEditable = true;
+        })
     
         del_icon1.addEventListener("click", function(e){
             var element = e.target
@@ -219,3 +219,4 @@ function exitOut(){ //Hides things
     
 }
 
+ 
