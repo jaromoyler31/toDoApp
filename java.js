@@ -46,7 +46,7 @@ function makeNewList(){ //Main Function for Creating NewList
 
         if (newList.length>15){ // check to see how long the text is to make sure it not to big
             document.querySelector(".color").prepend(inside_div);
-            const textnode = document.createTextNode(newList.slice(0,15)+"...");
+            const textnode = document.createTextNode(newList.slice(0,12)+"...");
             inside_div.appendChild(textnode);
             del_icon.innerHTML = "<i class='fa-solid fa-trash col-sm delete1 hide'></i>"
             document.querySelector(".color").append(del_icon);
@@ -67,8 +67,8 @@ function makeNewList(){ //Main Function for Creating NewList
 
 
         //tittle
-        if (newList.length>30){ // check to see how long the text is to make sure it not to big
-            tittle.textContent =newList.slice(0,30)+"...";
+        if (newList.length>15){ // check to see how long the text is to make sure it not to big
+            tittle.textContent =newList.slice(0,12)+"...";
         } else{
             tittle.textContent =newList;
         }
@@ -76,14 +76,13 @@ function makeNewList(){ //Main Function for Creating NewList
 
         inside_div.addEventListener("blur", function(){ //gives them the function if they are clicked to change background to gray 
             update_tittle()
-            console.log([listData[num_Array]]);
 
         })
         
         
 
 
-        
+        let tittle_text;
         
         inside_div.addEventListener("click", function(e){ //gives them the function if they are clicked to change background to gray 
             update_tittle()
@@ -92,17 +91,16 @@ function makeNewList(){ //Main Function for Creating NewList
             element.style.backgroundColor ="rgb(181, 181, 181)";
             x.style.display = "block";
             document.querySelector(".b_tittle").textContent = element.textContent
+            tittle_text = element.textContent
             num_Array = (listData.indexOf(this.innerHTML));
-            console.log(listData[num_Array])
-
-            listData[num_Array] = document.querySelector(".list_text").innerHTML;
         
             del_icon.addEventListener("click", function(f){
                 var f_del = f.target;
                 element.parentElement.remove();
                 
                 f_del.remove()
-                listData.splice(num_Array)
+
+                listData.splice(num_Array, num_Array)
                 
                 x.style.display = "none";
     
@@ -116,16 +114,15 @@ function makeNewList(){ //Main Function for Creating NewList
 
         inside_div.addEventListener("blur", function(e){ //gives them the function if they are unclicked to change background to gray 
             var element = e.target;
-            
+            tittle_text = element.textContent
+            listData[num_Array] = tittle_text
             element.style.backgroundColor ="rgb(242, 242, 242)";
-            document.querySelector(".b_tittle").textContent == element.textContent;
+            document.querySelector(".b_tittle").textContent == tittle_text
             
-
         })
         
         
           
-        
         
 
         const div_checkbox =document.createElement("div")
@@ -148,7 +145,7 @@ function update_tittle(){
     } )
 
     var new_text = document.querySelector(".list_text").innerHTML;
-    document.querySelector(".b_tittle").textContent = new_text;
+    // document.querySelector(".b_tittle").textContent = new_text;
     
 }
 
@@ -161,7 +158,6 @@ function add(){ //Adds new element (Checkbox)
 
     var input_task = document.querySelector(".task").value;
     var isEmpty = input_task.length == 0; //chekcing if empty
-    var icon;
     //New list is holding value of list Name
 
 
@@ -175,7 +171,6 @@ function add(){ //Adds new element (Checkbox)
 
         document.getElementById(listData[num_Array]).append(div4)
         const check_text = document.createElement("div");
-        console.log(document.getElementById(listData[num_Array]))
         check_text.classList.add("text", "col")
         document.querySelector(".checkpoint:last-child").append(check_text)
         var checkBox = document.createElement("input");

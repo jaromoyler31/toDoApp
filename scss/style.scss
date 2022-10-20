@@ -118,37 +118,60 @@ body{
     margin-left:31%; 
     padding-top:25px;
     text-align:start;
+    
+    .tittle_header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
     .b_tittle{
         font-size: 40px;
         padding-left:50px;
     }
+    .check_box{
+        overflow: auto;
+
+    }
     .exit{
         color:$black;
-        position:absolute;
-        top:100px;
-        right:42px;
+        // position:absolute;
+        // top:100px;
+        // right:42px;
         font-size:40px;
         cursor: pointer;
     }
     .add{
         color:$black;
-        position:absolute;
-        top:100px;
-        right:84px;
+        // position:absolute;
+        // top:100px;
+        // right:84px;
         font-size:40px;
         cursor: pointer;
     }
     .task{
         color:$black;
 
-        position:absolute;  
-        top:104px;
-        right:132px;
+        // position:absolute;  
+        // top:104px;
+        // right:132px;
         padding-top: 4px;
         padding-bottom:4px;
         padding-left:12px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     } 
+    .group{
+        text-align: end;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:10px;
+        padding-left:50px;
+        padding-right:50px;
+        
+        
+    }
     .checkpoint{
         font-size:30px;
         padding-left:40px;
@@ -177,3 +200,4 @@ body{
     }
     
 }
+
