@@ -8,6 +8,8 @@
     <title>ToDoApp</title>
     <script src="https://kit.fontawesome.com/4d02def751.js" crossorigin="anonymous"></script>
     <script defer type="text/javascript" src="java.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
 </head>
 <body>
     <div class="header">
@@ -19,10 +21,11 @@
             <i class="fa-solid fa-gear"></i>
         </div>  
     </div>
+    
 
     <div class="sideBar" >
         <input type="text" placeholder="Enter Your List Name...." id="input_list" class="input">
-        <button onclick ="makeNewList()"><span>Create List </span>&#8681</button>
+        <button class="animate__animated animate__bounce" onclick ="makeNewList()"><span>Create List </span>&#8681</button>
         <hr class="line">
 
         <div class="list_name" id="list_name">

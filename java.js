@@ -30,7 +30,7 @@ function makeNewList(){ //Main Function for Creating NewList
         const div = document.createElement("div"); //create a div 
         listData.unshift(newList);
         
-        div.classList.add("color", newList) //gives div class of newList and color
+        div.classList.add("color", newList,"animate__animated" ,"animate__zoomIn") //gives div class of newList and color
         const inside_div = document.createElement("div"); //create a div 
 
         inside_div.classList.add("list_text")
@@ -175,11 +175,7 @@ function add(){ //Adds new element (Checkbox)
     var isEmpty = input_task.length == 0; //chekcing if empty
     //New list is holding value of list Name
     let jimmy
-    if(/ /.test(listData[num_Array])){
-        jimmy = listData[num_Array].replaceAll(' ', '-');        
-    }else{
-        jimmy = listData[num_Array]
-    }
+    
 
 
     if (isEmpty){
@@ -188,9 +184,16 @@ function add(){ //Adds new element (Checkbox)
         
         document.querySelector(".task").value = ""; //sets input box with no text
         const div4 = document.createElement("div");
-        div4.classList.add("checkpoint", "row" )
+        div4.classList.add("checkpoint", "row", "animate__animated" ,"animate__flipInX" )
+        if(/ /.test(listData[num_Array])){
+            jimmy = listData[num_Array].replaceAll(' ', '-'); 
+            document.getElementById(jimmy).append(div4)   
+            console.log(document.getElementById(listData[num_Array]))    
+        }else{
+            document.getElementById(listData[num_Array]).append(div4)
+            console.log(document.getElementById(listData[num_Array]))    
 
-        document.getElementById(jimmy).append(div4)
+        }
         const check_text = document.createElement("div");
         check_text.classList.add("text", "col")
         document.querySelector(".checkpoint:last-child").append(check_text)
