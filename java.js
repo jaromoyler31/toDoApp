@@ -153,13 +153,11 @@ function makeNewList(){ //Main Function for Creating NewList
 
 
 
-function update_tittle(){
+function update_tittle(e){
     
     Array.from(document.querySelectorAll(".list_text")).forEach(element =>{
         element.contentEditable = true;
     } )
-
-    var new_text = document.querySelector(".list_text").innerHTML;
     // document.querySelector(".b_tittle").textContent = new_text;
     
 }
@@ -196,18 +194,20 @@ function add(){ //Adds new element (Checkbox)
         }
         const check_text = document.createElement("div");
         check_text.classList.add("text", "col")
-        document.querySelector(".checkpoint:last-child").append(check_text)
+        const checkBoxesGroup = document.querySelector(`#${listData[num_Array]}`)
+        const elementForAppending = checkBoxesGroup.querySelector(`.checkpoint:last-child`)
+        elementForAppending.append(check_text)
         var checkBox = document.createElement("input");
         checkBox.type = "checkbox";
         checkBox.classList.add("col-sm")
         
-        var endup =document.querySelector(".text:last-child")
+        var endup = checkBoxesGroup.querySelector(".text:last-child")
         endup.textContent = input_task ;
         document.querySelector(".text").contentEditable = true;
         document.querySelector(".text:last-child").prepend(checkBox);
         del_icon1 = document.createElement("a");   
         del_icon1.innerHTML = "<i class='fa-solid fa-trash col-sm delete'></i>"
-        document.querySelector(".checkpoint:last-child").append(del_icon1);
+        checkBoxesGroup.querySelector(".checkpoint:last-child").append(del_icon1);
         Array.from(document.querySelectorAll(".text")).forEach(element => {
             element.contentEditable = true;
         })
